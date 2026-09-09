@@ -1,0 +1,4 @@
+# Optional: background matting via rembg.
+# On first use it downloads u2net weights (~170MB) into the models/ directory.
+# If installation or download fails, the app gracefully falls back to the original image.
+rembg[cpu]>=2.0.50

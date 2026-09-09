@@ -1,0 +1,12 @@
+.venv
+__pycache__
+*.pyc
+frontend/node_modules
+frontend/dist
+.git
+.github
+data
+uploads
+outputs
+rembg_data
+models

@@ -1,0 +1,18 @@
+services:
+  app:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - AI_PROVIDER=mock
+      - VISION_MODEL=gpt-4o-mini
+      - TEXT_MODEL=gpt-4o-mini
+      - MAX_IMAGE_MB=8
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
+      - ./uploads:/app/uploads
+      - ./outputs:/app/outputs
+      - ./models:/app/models   # rembg 模型权重缓存（首次运行自动下载，落盘后复用）
+    restart: unless-stopped
